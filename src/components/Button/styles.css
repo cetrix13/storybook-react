@@ -1,0 +1,27 @@
+.Button {
+    background-color: #fff;
+    border-width: 1px solid #dbdbdb;
+    color: #363636;
+    border-radius: 4px;
+    padding: 0.5em 0.75em;
+    cursor: pointer;
+}
+
+.Button--primary {
+    background-color: #00d1b2;
+    border-color: transparent;
+    color: #fff;
+
+}
+
+.Button--danger {
+    background-color: #ff3860;
+    border-color: transparent;
+    color: #fff;
+}
+
+.Button--notice {
+    background-color: #209cee;
+    border-color: transparent;
+    color: #fff;
+}

@@ -3,9 +3,17 @@ import "./styles.css";
 
 const Button = ({ children, onClick, type }) => {
     const classes = ["Button"];
-    if (type === "primary") {classes.push("Button--primary");}
-    else if (type === "danger") {classes.push("Button--danger");}
-    else if (type === "notice") {classes.push("Button--notice");}
+    switch (type) {
+        case "primary":
+            classes.push("Button--primary");
+            break;
+        case "danger":
+            classes.push("Button--danger");
+            break;
+        case "info":
+            classes.push("Button--info");
+            break;
+    }
     return (
         <button
         className={classes.join(" ")}

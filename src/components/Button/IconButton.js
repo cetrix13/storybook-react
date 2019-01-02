@@ -1,8 +1,11 @@
 import React from "react";
 import "./css/default-button.css";
 
-const Button = ({ children, onClick, type }) => {
+const IconButton = ({ children, onClick, type, icon }) => {
     const classes = ["Button"];
+    const iconClasses = [];
+    iconClasses.push("fa-" + icon);
+
     switch (type) {
         case "primary":
             classes.push("Button--primary");
@@ -14,12 +17,16 @@ const Button = ({ children, onClick, type }) => {
             classes.push("Button--info");
             break;
     }
+
     return (
         <button
         className={classes.join(" ")}
-        onClick={onClick}>{children}
+        onClick={onClick}>
+            <span class="icon">
+                <i class={iconClasses.join(" ")}></i>
+            </span> {children}
         </button>
         );
 }
 
-export default Button;
+export default IconButton;

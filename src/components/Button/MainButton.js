@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/default-button.css";
 
-const Button = ({ children, onClick, type }) => {
+const MainButton= ({ children, onClick, type }) => {
     const classes = ["Button"];
     switch (type) {
         case "primary":
@@ -22,4 +22,4 @@ const Button = ({ children, onClick, type }) => {
         );
 }
 
-export default Button;
+export default MainButton;

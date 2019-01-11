@@ -1,0 +1,43 @@
+.animatedButton {
+  width: 100px;
+  height: 30px;
+  line-height: 30px;
+  position: absolute;
+  overflow: hidden;
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+.animatedButton span,
+.animatedButton .animatedButton__icon {
+  display: block;
+  height: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+}
+.animatedButton span {
+  width: 72%;
+  line-height: inherit;
+  left: 0;
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+.animatedButton span:after {
+  content: "";
+  background-color: #eee;
+  width: 1px;
+  height: 70%;
+  position: absolute;
+  top: 15%;
+  right: -1px;
+}
+.animatedButton .animatedButton__icon {
+  width: 28%;
+  right: 0;
+  transition: all 0.25s cubic-bezier(0.31, -0.105, 0.43, 1.4);
+}
+.animatedButton:hover span {
+  left: -72%;
+  opacity: 0;
+}
+.animatedButton:hover .animatedButton__icon {
+  width: 100%;
+}

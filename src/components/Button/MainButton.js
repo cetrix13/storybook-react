@@ -20,6 +20,6 @@ const MainButton= ({ children, onClick, type }) => {
         onClick={onClick}>{children}
         </button>
         );
-}
+};
 
 export default MainButton;

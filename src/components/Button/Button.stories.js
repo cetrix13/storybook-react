@@ -26,7 +26,7 @@ stories.add('Button--Main', () => {
         Facebook: "facebook fab",
         Success: "check fas",
         Close: "times fas",
-    }
+    };
     const buttonText = text("Label", "Dynamic label");
     const icon = selectV2("Icon", icons, Object.values(icons)[0]);
     const type = selectV2("Type", types, Object.values(types)[0]);

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './css/animated-button.css';
 
 function AnimatedButton(props) {
@@ -19,7 +19,7 @@ function AnimatedButton(props) {
                     <div className="animatedButton__icon">
                         <i className="fa-times fas"></i>
                     </div>
-                </button>)
+                </button>);
 
 }
 

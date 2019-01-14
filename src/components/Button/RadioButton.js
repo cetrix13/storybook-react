@@ -20,7 +20,7 @@ class RadioButton extends React.Component {
                 (this.state.activeBtn === index) ? this.classes.push(['is-active']) : this.classes.splice(1,2);
                 return <span
                     class={ this.classes.join(" ") }
-                    onClick={ ()=> {this.setState({activeBtn: index}) }}>
+                    onClick={ ()=> {this.setState({activeBtn: index}); }}>
                     { item }
                 </span>;
             })

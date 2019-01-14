@@ -27,6 +27,6 @@ const IconButton = ({ children, onClick, type, icon }) => {
             </span> {children}
         </button>
         );
-}
+};
 
 export default IconButton;

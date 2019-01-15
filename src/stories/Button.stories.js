@@ -1,10 +1,10 @@
 import React from "react";
 import { selectV2, text, withKnobs } from "@storybook/addon-knobs/react";
 import { storiesOf } from "@storybook/react";
-import MainButton from "./MainButton";
-import IconButton from "./IconButton";
-import RadioButton from "./RadioButton";
-import AnimatedButton from "./AnimatedButton";
+import MainButton from "../components/Button/MainButton";
+import IconButton from "../components/Button/IconButton";
+import RadioButton from "../components/Button/RadioButton";
+import AnimatedButton from "../components/Button/AnimatedButton";
 
 const stories = storiesOf('Buttons', module).addDecorator(withKnobs);
 const types = {
@@ -18,7 +18,7 @@ stories.add('Button--Main', () => {
     const buttonText = text("Label", "Dynamic label");
     const type = selectV2("Type", types, Object.values(types)[0]);
 
-    return <MainButton type={type}>{buttonText}</MainButton>;
+    return <MainButton btnType={type}>{buttonText}</MainButton>;
 }).add('Button--With--Icon', () => {
     const icons = {
         Github: "github fab",

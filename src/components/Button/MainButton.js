@@ -1,9 +1,9 @@
 import React from "react";
 import "./css/default-button.css";
 
-const MainButton= ({ children, onClick, type }) => {
+const MainButton = ({ children, onClick, btnType, isSubmit, isDisabled }) => {
     const classes = ["Button"];
-    switch (type) {
+    switch (btnType) {
         case "primary":
             classes.push("Button--primary");
             break;
@@ -14,10 +14,12 @@ const MainButton= ({ children, onClick, type }) => {
             classes.push("Button--info");
             break;
     }
+
     return (
         <button
-        className={classes.join(" ")}
-        onClick={onClick}>{children}
+        type={ isSubmit ? "submit":'' }
+        className={ classes.join(" ") }
+        onClick={ onClick }>{ children }
         </button>
         );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 import './css/animated-button.css';
 
-function AnimatedButton(props) {
+const AnimatedButton = (props) => {
     const classes = ["Button", "animatedButton"];
     switch (props.type) {
         case "primary":
@@ -14,13 +14,14 @@ function AnimatedButton(props) {
             classes.push("Button--info");
             break;
     }
-        return (<button className={ classes.join(" ") }>
-                <span className="animatedButton__text"> { props.children }</span>
-                    <div className="animatedButton__icon">
-                        <i className="fa-times fas"></i>
-                    </div>
-                </button>);
-
+    return (
+    <button className={ classes.join(" ") }>
+        <span className="animatedButton__text"> { props.children }</span>
+            <div className="animatedButton__icon">
+                <i className="fa-times fas"></i>
+            </div>
+    </button>
+    );
 }
 
 export default AnimatedButton;

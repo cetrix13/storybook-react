@@ -1,0 +1,60 @@
+.demoForm {
+    display: table-row;
+}
+.control {
+    position: relative;
+    display: inline-block;
+    margin: 10px;
+    font-size: 105%;
+}
+
+.control__input {
+  display: table-cell;
+  width: 275px;
+  padding: 10px 0 10px 15px;
+  border-radius: 3px;
+  font-size: inherit;
+  outline: 0;
+  text-indent: 90px;
+}
+
+.control__label {
+    background-color: #7AB893;
+    display: table-cell;
+    position: absolute;
+    outline: 0;
+    top: 0;
+    left: 0;
+    padding: 12px 15px;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+    overflow: hidden;
+  }
+
+.control__label--primary {
+    background-color: #00d1b2;
+}
+.control__label--danger {
+    background-color: #ff3860;
+    color: #fff;
+}
+.control__label--info {
+    background-color: #209cee;
+    color: #fff;
+}
+.is-danger {
+    border-color: #ff3860;
+}
+.is-success {
+    border-color: #23d160;
+}
+.error {
+    display: block;
+    font-size: .85rem;
+    margin-top: .25rem;
+    color: #ff3860;
+}
+
+.Button {
+    border: 2px solid #eee;
+}

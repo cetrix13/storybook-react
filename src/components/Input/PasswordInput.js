@@ -1,6 +1,5 @@
 import React from 'react';
 import { FormErrors } from  './FormErrors';
-import  MainButton from  '../Button/MainButton';
 import './css/password-input.css';
 
 class PasswordInput extends React.Component {
@@ -16,7 +15,7 @@ class PasswordInput extends React.Component {
     }
     validateField(fieldName, value) {
         const passwordValid = value.length >= 6;
-        const error = passwordValid ? '': ' is too short, should be >= 6 symbols';
+        const error = (passwordValid || value.length == 0) ? '': ' is too short, should be >= 6 symbols';
         this.setState({
             passwordValid: passwordValid,
             formErrors: error,

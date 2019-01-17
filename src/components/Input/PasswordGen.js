@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import IconButton from '../Button/IconButton';
+import { IconButton } from '../Buttons';
 import './css/password-gen.css';
 
 
@@ -22,7 +22,7 @@ class PasswordGen extends React.Component {
         length: 10,
         digits: 3,
         letters: 3,
-        symbols: 1
+        symbols: 4,
       }
 
       // first, fill the password array with letters, uppercase and lowecase
@@ -89,7 +89,7 @@ class PasswordGen extends React.Component {
         }
         return (
             <div className="control">
-                <input type="text" className="control__input" name="passwordGen" id="passwordGen" placeholder="Generate secure pass"
+                <input type="text" className="control__input" name="passwordGen" id="passwordGen" placeholder="Generate password"
                 value={ this.state.password }
                 onChange={ (event) => this.handleOnChange(event) }
                 />

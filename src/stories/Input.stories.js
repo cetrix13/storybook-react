@@ -1,7 +1,8 @@
 import React from "react";
 import { selectV2, text, withKnobs } from "@storybook/addon-knobs/react";
 import { storiesOf } from "@storybook/react";
-import TextInput from "../components/Input/TextInput";
+import PasswordInput from "../components/Input/PasswordInput";
+import PasswordGen from "../components/Input/PasswordGen";
 
 const stories = storiesOf('Inputs', module).addDecorator(withKnobs);
 
@@ -11,7 +12,12 @@ const types = {
         Danger: "danger",
         Info: "info",
 };
-stories.add('Input--Text', ()=> {
+stories.add('Input--Password', ()=> {
     const type = selectV2("Type", types, Object.values(types)[0]);
-    return <TextInput type ={ type } />
+    return (
+    <div className="container">
+        <PasswordInput type ={ type } />
+        <PasswordGen type ={ type } />
+    </div>
+    );
 })

@@ -1,9 +1,9 @@
 import React from 'react';
 import { FormErrors } from  './FormErrors';
 import  MainButton from  '../Button/MainButton';
-import './css/text-input.css';
+import './css/password-input.css';
 
-class TextInput extends React.Component {
+class PasswordInput extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -16,7 +16,7 @@ class TextInput extends React.Component {
     }
     validateField(fieldName, value) {
         const passwordValid = value.length >= 6;
-        const error = passwordValid ? '': ' is too short';
+        const error = passwordValid ? '': ' is too short, should be >= 6 symbols';
         this.setState({
             passwordValid: passwordValid,
             formErrors: error,
@@ -48,20 +48,19 @@ class TextInput extends React.Component {
             break;
     }
     return (
-        <form className="demoForm">
+        <form className="passwordForm">
             <div className="control">
-                <input type="text" className="control__input" name="password" id="password" placeholder="At least 6 symbols"
+                <input type="password" className="control__input" name="password" id="password" placeholder="At least 6 symbols"
                 value={ this.state.password }
                 onChange={ (event) => this.handleOnChange(event) }
                 />
                 <label htmlFor="password" className={ classes.join(' ') }>Password:</label>
-                <MainButton isSubmit="true" btnType="Default">Submit</MainButton>
                 <FormErrors formErrors = { this.state.formErrors }/>
             </div>
         </form>
     )
     }
 }
-export default TextInput;
+export default PasswordInput;
 
 

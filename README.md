@@ -12,6 +12,10 @@ and `create-react-app`.
 * Loaders
 * Breadcrumbs
 
+## Screenshot
+
+![demo image](img/demo.jpg)
+
 ## License
 
 [MIT](https://github.com/cetrix13/storybook-react/blob/master/LICENSE)
